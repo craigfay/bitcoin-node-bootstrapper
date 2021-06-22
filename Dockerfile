@@ -1,5 +1,5 @@
-FROM ubuntu 
+FROM debian
 
 COPY . .
 
-# RUN bash install_dependencies.sh
+RUN bash build_from_source.sh
