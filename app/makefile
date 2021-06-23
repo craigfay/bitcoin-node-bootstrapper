@@ -1,4 +1,4 @@
-CC=gcc
+CC=emcc
 CFLAGS=-I.
 DEPS = hellomake.h
 
@@ -8,4 +8,4 @@ DEPS = hellomake.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 hellomake: hellomake.o hellofunc.o
-	$(CC) -o hellomake.exe hellomake.o hellofunc.o
+	$(CC) -o hellomake.wasm hellomake.o hellofunc.o
